@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormNew
 {
-    public partial class gvData : Form
+    public partial class Login : Form
     {
-        public gvData()
+        public Login()
         {
             InitializeComponent();
             txtUsername.ForeColor = System.Drawing.Color.DeepPink;
@@ -27,14 +27,16 @@ namespace WindowsFormNew
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-UA0O1ET\\SQLEXPRESS;Initial Catalog=ADODotNetDB;Integrated Security=true;");
-            conn.Open();
-            SqlCommand cmd = new SqlCommand("Insert into Userinfo values('" + txtUsername.Text + "','" + txtPassword.Text + "')", conn);
-            cmd.ExecuteNonQuery();
-            txtUsername.Text = "";
-            txtPassword.Text = "";
-            conn.Close();
-            lblmsg.Text = "Record Inserted Successfully";
+            //SqlConnection conn = new SqlConnection("Data Source=DESKTOP-UA0O1ET\\SQLEXPRESS;Initial Catalog=ADODotNetDB;Integrated Security=true;");
+            //conn.Open();
+            //SqlCommand cmd = new SqlCommand("Insert into Userinfo values('" + txtUsername.Text + "','" + txtPassword.Text + "')", conn);
+            //cmd.ExecuteNonQuery();
+            //txtUsername.Text = "";
+            //txtPassword.Text = "";
+            //conn.Close();
+            //lblmsg.Text = "Record Inserted Successfully";
+
+           
 
         }
 

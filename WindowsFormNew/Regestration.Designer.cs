@@ -42,6 +42,12 @@
             this.txtaddress = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.lblresult = new System.Windows.Forms.Label();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.gvdata = new System.Windows.Forms.DataGridView();
+            this.btnshow = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.gvdata)).BeginInit();
             this.SuspendLayout();
             // 
             // lblfname
@@ -172,11 +178,70 @@
             this.lblresult.Size = new System.Drawing.Size(0, 25);
             this.lblresult.TabIndex = 13;
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(186, 354);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(92, 31);
+            this.btnUpdate.TabIndex = 14;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(311, 354);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(92, 31);
+            this.btnDelete.TabIndex = 15;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(63, 411);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(92, 31);
+            this.btnClear.TabIndex = 16;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // gvdata
+            // 
+            this.gvdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvdata.Location = new System.Drawing.Point(452, 148);
+            this.gvdata.Name = "gvdata";
+            this.gvdata.RowHeadersWidth = 51;
+            this.gvdata.RowTemplate.Height = 24;
+            this.gvdata.Size = new System.Drawing.Size(240, 150);
+            this.gvdata.TabIndex = 17;
+            // 
+            // btnshow
+            // 
+            this.btnshow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnshow.Location = new System.Drawing.Point(186, 422);
+            this.btnshow.Name = "btnshow";
+            this.btnshow.Size = new System.Drawing.Size(92, 31);
+            this.btnshow.TabIndex = 18;
+            this.btnshow.Text = "Show";
+            this.btnshow.UseVisualStyleBackColor = true;
+            this.btnshow.Click += new System.EventHandler(this.btnshow_Click);
+            // 
             // Regestration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 601);
+            this.Controls.Add(this.btnshow);
+            this.Controls.Add(this.gvdata);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.lblresult);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txtaddress);
@@ -193,6 +258,7 @@
             this.Controls.Add(this.lblfname);
             this.Name = "Regestration";
             this.Text = "Regestration";
+            ((System.ComponentModel.ISupportInitialize)(this.gvdata)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,5 +280,10 @@
         private System.Windows.Forms.TextBox txtaddress;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label lblresult;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.DataGridView gvdata;
+        private System.Windows.Forms.Button btnshow;
     }
 }

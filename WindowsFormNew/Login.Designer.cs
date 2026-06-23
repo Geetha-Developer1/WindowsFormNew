@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormNew
 {
-    partial class gvData
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -33,7 +33,7 @@
             // gvData
             // 
             this.ClientSize = new System.Drawing.Size(774, 447);
-            this.Name = "gvData";
+            this.Name = "Login";
             this.ResumeLayout(false);
 
         }

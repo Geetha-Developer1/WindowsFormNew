@@ -18,5 +18,6 @@ namespace WindowsFormNew
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Regestration());
         }
+
     }
 }
