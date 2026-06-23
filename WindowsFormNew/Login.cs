@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormNew
 {
-    public partial class Login : Form
+    public partial class gvData : Form
     {
-        public Login()
+        public gvData()
         {
             InitializeComponent();
             txtUsername.ForeColor = System.Drawing.Color.DeepPink;
@@ -21,7 +21,7 @@ namespace WindowsFormNew
             lblUsername.ForeColor = System.Drawing.Color.DarkViolet;
             lblPassword.ForeColor = System.Drawing.Color.DarkViolet;
             btnSubmit.Enabled = false;
-            txtPassword.Enabled= false;
+            txtPassword.Enabled = false;
             lblmsg.ForeColor = System.Drawing.Color.Green;
         }
 
@@ -35,12 +35,12 @@ namespace WindowsFormNew
             txtPassword.Text = "";
             conn.Close();
             lblmsg.Text = "Record Inserted Successfully";
-           
+
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
-            if(txtUsername.Text.Length>0)
+            if (txtUsername.Text.Length > 0)
             {
                 txtPassword.Enabled = true;
             }
@@ -54,7 +54,7 @@ namespace WindowsFormNew
         {
             if (txtPassword.Text.Length > 0)
             {
-               btnSubmit.Enabled = true;
+                btnSubmit.Enabled = true;
             }
             else
             {
@@ -66,7 +66,7 @@ namespace WindowsFormNew
         {
             SqlConnection conn = new SqlConnection("Data Source=DESKTOP-UA0O1ET\\SQLEXPRESS;Initial Catalog=ADODotNetDB;Integrated Security=true;");
             conn.Open();
-            SqlCommand cmd = new SqlCommand("Update Userinfo set Password='"+txtPassword.Text+"' where Username='"+txtUsername.Text+"'", conn);
+            SqlCommand cmd = new SqlCommand("Update Userinfo set Password='" + txtPassword.Text + "' where Username='" + txtUsername.Text + "'", conn);
             cmd.ExecuteNonQuery();
             txtUsername.Text = "";
             txtPassword.Text = "";
@@ -84,8 +84,8 @@ namespace WindowsFormNew
             txtPassword.Text = "";
             conn.Close();
             lblmsg.Text = "Record Deleted Successfully";
+            
         }
 
-       
     }
 }
